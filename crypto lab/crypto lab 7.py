@@ -1,0 +1,11 @@
+# Diffie-Hellman key exchange
+q=int(input('enter prime number:\t'))
+a=int(input("enter a  primitive root:"))
+XA=int(input("enter Alice private key(XA):\t"))
+XB=int(input("enter Bob private key(XB):\t"))
+YA=pow(a,XA,q)
+YB=pow(a,XB,q)
+KA=pow(YB,XA,q)
+KB=pow(YA,XB,q)
+print('secret key for the alice is:%d'%(KA))
+print('secret key for the Bob is:%d'%(KB))
